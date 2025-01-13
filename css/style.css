@@ -1,15 +1,16 @@
-/* style.css */
+/* style.css - Customized using the extracted colors from the logo */
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #1f2c3c; /* Main background color */
+    color: #ffffff; /* Text color for good contrast */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #222d3b; /* Slightly darker for the header */
+    color: #ffffff;
     padding: 10px 0;
     text-align: center;
 }
@@ -19,21 +20,21 @@ header img {
 }
 
 nav {
-    background-color: #444;
+    background-color: #212e40; /* Deep navy for the navigation */
     overflow: hidden;
 }
 
 nav a {
     float: left;
     display: block;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #1e2b3b; /* Highlight with a lighter shade */
 }
 
 .container {
@@ -41,13 +42,14 @@ nav a:hover {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-    background-color: #fff;
+    background-color: #202c3a; /* Slightly muted for the main content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #222d3b; /* Match the header color */
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
