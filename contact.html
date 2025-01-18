@@ -99,7 +99,8 @@
 
             const form = event.target;
 
-            emailjs.sendForm('service_dug2aux', 'template_e042o8u', form)
+            // Use EmailJS to send the form data
+            emailjs.sendForm('service_dug2aux', 'template_5wr4uyf', form) // Update to your template ID
                 .then(() => {
                     alert('Message sent successfully!');
                     window.location.href = 'contact_success.html'; // Redirect to success page
