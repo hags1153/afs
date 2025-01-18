@@ -87,12 +87,11 @@
         <p>&copy; 2000 Atlantis Fire and Security Services. All rights reserved.</p>
     </footer>
 
-    <!-- Include the EmailJS library -->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         // Initialize EmailJS with your Public Key
         (function() {
-            emailjs.init("R4Y2W9ztgoU24yQeC"); // Replace with your actual EmailJS Public Key
+            emailjs.init("R4Y2W9ztgoU24yQeC"); // Replace with your EmailJS Public Key
         })();
 
         function sendEmail(event) {
@@ -100,12 +99,11 @@
 
             const form = event.target;
 
-            // Send the form data using EmailJS
-            emailjs.sendForm('service_dug2aux', 'template_5wr4uyf', form)
-                .then((response) => {
-                    console.log('Email sent successfully:', response.status, response.text);
+            // Use EmailJS to send the form data
+            emailjs.sendForm('service_dug2aux', 'template_5wr4uyf', form) // Update to your template ID
+                .then(() => {
                     alert('Message sent successfully!');
-                    window.location.href = 'contact_success.html'; // Redirect to the success page
+                    window.location.href = 'contact_success.html'; // Redirect to success page
                 })
                 .catch((error) => {
                     console.error('Failed to send message:', error);
