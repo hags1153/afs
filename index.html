@@ -13,12 +13,13 @@
         <p>Your trusted partner in fire alarm and security services in Massachusetts.</p>
     </header>
 
-    <!-- The dynamic navbar will be included here -->
+    <!-- Dynamic Navbar -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch("navbar.html")
                 .then(response => {
                     if (!response.ok) {
+                        console.error(`Failed to load navbar: ${response.statusText}`);
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.text();
@@ -28,16 +29,15 @@
                     navContainer.innerHTML = data;
                     document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
                 })
-                .catch(error => console.error("Error loading the navbar:", error));
+                .catch(error => console.error("Error loading navbar:", error));
         });
     </script>
-
 
     <div class="container">
         <section>
             <h2>Why Choose Us?</h2>
             <p>With over 20 years of experience, we provide top-quality fire alarm and security solutions to keep your home and business safe. We pride ourselves on our exceptional customer service, innovative technology, and customized solutions.</p>
-            <img src="images/home_security.jpg" alt="Why Choose Us">
+            <img src="images/camera_sys_2.jpeg" alt="Why Choose Us">
         </section>
         <section>
             <h2>Our Services</h2>
