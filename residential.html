@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Services - Atlantis Fire and Security</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Residential Services</h1>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+    <main class="container">
+        <h2>Protect Your Home with Our Residential Services</h2>
+        <section>
+            <h3>Home Security Systems</h3>
+            <p>Keep your home safe with advanced security systems tailored to your needs.</p>
+        </section>
+        <section>
+            <h3>Home Fire Alarms</h3>
+            <p>Protect your family with reliable fire alarm systems for early detection.</p>
+        </section>
+        <section>
+            <h3>24/7 Monitoring</h3>
+            <p>Enjoy peace of mind with continuous monitoring of your home’s security and safety systems.</p>
+        </section>
+        <section>
+            <h3>Temperature Monitoring</h3>
+            <p>Prevent disasters with high/low temperature monitoring for sensitive areas of your home.</p>
+        </section>
+        <section>
+            <h3>Water Level/Flood Detection</h3>
+            <p>Protect your home from water damage with early flood and water level detection systems.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

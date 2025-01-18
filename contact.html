@@ -57,12 +57,18 @@
         <img src="images/afs_logo.png" alt="AFS Logo">
         <h1>Contact Us</h1>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
     <main>
         <section>
             <h2>Get in Touch</h2>
