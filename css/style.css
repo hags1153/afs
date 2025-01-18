@@ -72,7 +72,7 @@ nav ul li .dropdown li {
 }
 
 nav ul li .dropdown li a {
-    color: #ffffff; /* White text for dropdown items */
+    color: #ffffff; /* Solid white text for dropdown items */
     padding: 8px 12px;
     display: block;
     text-decoration: none;
