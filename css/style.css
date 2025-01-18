@@ -20,14 +20,14 @@ header img {
 }
 
 nav {
-    border: 2px solid #1f2c3c; /* Blue theme for border */
-    padding: 10px; /* Adds spacing inside the border */
-    margin-bottom: 20px; /* Adds space below the navbar */
+    border: 2px solid #1f2c3c; /* Consistent blue theme for border */
+    padding: 10px;
+    margin-bottom: 20px;
     background-color: #1f2c3c; /* Matches the blue theme */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -41,8 +41,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* White text color for visibility */
-    font-weight: bold; /* Bold lettering */
+    color: #ffffff !important; /* Force solid white text color */
+    font-weight: bold; /* Bold text */
     padding: 10px 15px;
     display: block;
 }
@@ -51,37 +51,27 @@ nav ul li:hover {
     background-color: #2a3a4f; /* Slightly lighter blue for hover */
 }
 
-/* Dropdown Menu Hidden by Default */
 nav ul li .dropdown {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #2a3a4f; /* Dropdown matches hover color */
-    border: 1px solid #1f2c3c; /* Blue border */
+    border: 1px solid #1f2c3c;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    list-style: none;
-    margin: 0;
-    padding: 0;
     z-index: 1000;
 }
 
-/* Dropdown Menu Items */
-nav ul li .dropdown li {
-    white-space: nowrap; /* Prevents text wrapping */
-}
-
 nav ul li .dropdown li a {
-    color: #ffffff; /* Solid white text for dropdown items */
+    color: #ffffff !important; /* Force solid white for dropdown items */
+    font-weight: bold;
     padding: 8px 12px;
     display: block;
     text-decoration: none;
-    font-weight: bold; /* Bold text for dropdown */
 }
 
-/* Show Dropdown on Hover */
 nav ul li:hover .dropdown {
-    display: block; /* Dropdown becomes visible when hovering over parent */
+    display: block;
 }
 
 .container {
