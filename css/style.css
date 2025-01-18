@@ -20,10 +20,10 @@ header img {
 }
 
 nav {
-    border: 2px solid #000; /* Adjust color and width as needed */
-    padding: 10px; /* Optional: Adds spacing inside the border */
-    margin-bottom: 20px; /* Optional: Adds space below the navbar */
-    background-color: #f4f4f4; /* Optional: Adds background for clarity */
+    border: 2px solid #ccc; /* Adjusted border color */
+    padding: 10px; /* Adds spacing inside the border */
+    margin-bottom: 20px; /* Adds space below the navbar */
+    background-color: #333; /* Matches the page theme */
 }
 
 nav ul {
@@ -41,34 +41,45 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    color: #fff; /* White text color for visibility */
     padding: 10px 15px;
     display: block;
 }
 
+nav ul li:hover {
+    background-color: #555; /* Highlights menu items on hover */
+}
+
+/* Dropdown Menu Hidden by Default */
 nav ul li .dropdown {
-    display: none;
+    display: none; /* Hidden by default */
     position: absolute;
-    left: 0;
     top: 100%;
+    left: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     list-style: none;
     margin: 0;
     padding: 0;
+    z-index: 1000;
 }
 
-nav ul li:hover .dropdown {
-    display: block;
-}
-
+/* Dropdown Menu Items */
 nav ul li .dropdown li {
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 nav ul li .dropdown li a {
+    color: #333; /* Text color for dropdown items */
     padding: 8px 12px;
     display: block;
+    text-decoration: none;
+}
+
+/* Show Dropdown on Hover */
+nav ul li:hover .dropdown {
+    display: block; /* Dropdown becomes visible when hovering over parent */
 }
 
 .container {
