@@ -19,7 +19,7 @@
             fetch("navbar.html")
                 .then(response => {
                     if (!response.ok) {
-                        console.error(`Failed to load navbar: ${response.statusText}`);
+                        console.error(`Failed to fetch navbar.html: ${response.status} - ${response.statusText}`);
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.text();
@@ -29,9 +29,12 @@
                     navContainer.innerHTML = data;
                     document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
                 })
-                .catch(error => console.error("Error loading navbar:", error));
+                .catch(error => {
+                    console.error("Error loading navbar:", error);
+                });
         });
     </script>
+
 
     <div class="container">
         <section>
@@ -53,7 +56,7 @@
         <section class="cta">
             <h2>Secure Your Home Today</h2>
             <p>Take the first step toward protecting what matters most. Schedule your free consultation and get a personalized estimate for your security needs.</p>
-            <a href="booking.html" class="button">Schedule Your Free Consultation Now!</a>
+            <a href="contact.html" class="button">Book Your Free Consultation Now!</a>
         </section>
     </div>
     <footer>
