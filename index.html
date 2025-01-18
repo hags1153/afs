@@ -13,27 +13,16 @@
         <p>Your trusted partner in fire alarm and security services in Massachusetts.</p>
     </header>
 
-    <!-- Dynamic Navbar -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("navbar.html")
-                .then(response => {
-                    if (!response.ok) {
-                        console.error(`Failed to fetch navbar.html: ${response.status} - ${response.statusText}`);
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    const navContainer = document.createElement("div");
-                    navContainer.innerHTML = data;
-                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
-                })
-                .catch(error => {
-                    console.error("Error loading navbar:", error);
-                });
-        });
-    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="residential.html">Residential</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
 
     <div class="container">
