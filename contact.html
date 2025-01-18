@@ -68,7 +68,7 @@
             <h2>Get in Touch</h2>
             <p>We would love to hear from you! Please use the form below to reach out to us.</p>
             <div class="form-container">
-                <form action="https://formspree.io/f/mpwwgqbo" method="post">
+                <form id="contactForm" action="https://formspree.io/f/mpwwgqbo" method="post" onsubmit="redirectAfterSubmit(event)">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required><br><br>
 
@@ -78,13 +78,30 @@
                     <label for="message">Message:</label><br>
                     <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-                    <!-- Success page redirection -->
-                    <input type="hidden" name="_redirect" value="https://atlantisfireandsecurity.com/contact_success.html">
-
-                    <!-- Anti-spam honeypot field -->
-                    <input type="text" name="_gotcha" style="display:none">
-
                     <button type="submit">Submit</button>
+                </form>
+
+                <script>
+                    function redirectAfterSubmit(event) {
+                        event.preventDefault(); // Prevent the default form submission behavior
+
+                        const form = event.target;
+
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                        }).then((response) => {
+                            if (response.ok) {
+                                window.location.href = 'https://atlantisfireandsecurity.com/contact_success.html';
+                            } else {
+                                alert('There was an error submitting the form. Please try again.');
+                            }
+                        }).catch((error) => {
+                            console.error('Error:', error);
+                            alert('There was an error submitting the form. Please try again.');
+                        });
+                    }
+                </script>
                 </form>
             </div>
         </section>
