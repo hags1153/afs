@@ -23,7 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ";
 
     if (mail($to, $subject, $emailBody, $headers)) {
-        echo "Thank you for contacting us, $name. We'll get back to you shortly.";
+        // Redirect to the success page
+        header("Location: contact_success.html");
+        exit();
     } else {
         echo "Sorry, there was an error sending your message. Please try again later.";
     }
