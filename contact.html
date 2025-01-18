@@ -36,7 +36,7 @@
 
         form input:focus, form textarea:focus {
             outline: none;
-            border-color: #fff;
+            border-color: #444;
         }
 
         form button {
@@ -68,40 +68,17 @@
             <h2>Get in Touch</h2>
             <p>We would love to hear from you! Please use the form below to reach out to us.</p>
             <div class="form-container">
-                <form id="contactForm" action="https://formspree.io/f/mpwwgqbo" method="post" onsubmit="redirectAfterSubmit(event)">
+                <form id="contactForm" onsubmit="sendEmail(event)">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <input type="text" id="name" name="from_name" required><br><br>
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <input type="email" id="email" name="from_email" required><br><br>
 
                     <label for="message">Message:</label><br>
                     <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
                     <button type="submit">Submit</button>
-                </form>
-
-                <script>
-                    function redirectAfterSubmit(event) {
-                        event.preventDefault(); // Prevent the default form submission behavior
-
-                        const form = event.target;
-
-                        fetch(form.action, {
-                            method: 'POST',
-                            body: new FormData(form),
-                        }).then((response) => {
-                            if (response.ok) {
-                                window.location.href = 'https://atlantisfireandsecurity.com/contact_success.html';
-                            } else {
-                                alert('There was an error submitting the form. Please try again.');
-                            }
-                        }).catch((error) => {
-                            console.error('Error:', error);
-                            alert('There was an error submitting the form. Please try again.');
-                        });
-                    }
-                </script>
                 </form>
             </div>
         </section>
@@ -109,5 +86,29 @@
     <footer>
         <p>&copy; 2000 Atlantis Fire and Security Services. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your Public Key
+        (function() {
+            emailjs.init("R4Y2W9ztgoU24yQeC"); // Replace with your EmailJS Public Key
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+
+            emailjs.sendForm('service_dug2aux', 'template_5wr4uyf', form)
+                .then(() => {
+                    alert('Message sent successfully!');
+                    window.location.href = 'contact_success.html'; // Redirect to success page
+                })
+                .catch((error) => {
+                    console.error('Failed to send message:', error);
+                    alert('Failed to send message. Please try again.');
+                });
+        }
+    </script>
 </body>
 </html>
