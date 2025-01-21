@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>24/7 Monitoring Services</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Reliable 24/7 Monitoring Services</h2>
+            <p>
+                At Atlantis Fire and Security, your safety is our top priority. Our 24/7 monitoring services
+                ensure that your home or business is protected at all times. With advanced technology and a
+                dedicated team, we provide rapid response to any security or safety alerts.
+            </p>
+        </section>
+
+        <section>
+            <h2>What Our Monitoring Covers</h2>
+            <ul>
+                <li>Intrusion detection and alarms.</li>
+                <li>Fire and smoke alarms.</li>
+                <li>Carbon monoxide detection.</li>
+                <li>Temperature and flood monitoring.</li>
+                <li>Security system tampering or failures.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Our Monitoring Services?</h2>
+            <ul>
+                <li>Immediate response to alarms and alerts.</li>
+                <li>State-of-the-art monitoring centers with redundancy systems.</li>
+                <li>Integration with mobile apps for real-time updates and control.</li>
+                <li>24/7 access to professional support and assistance.</li>
+                <li>Customizable monitoring plans to fit your needs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/monitoring_center.jpeg" alt="Monitoring Center">
+                <img src="images/security_alerts.jpeg" alt="Real-Time Security Alerts">
+                <img src="images/monitoring.png" alt="Emergency Response Team">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Secure your property with our reliable monitoring services. Contact us today to learn more
+                about how we can keep your home or business safe 24/7.
+            </p>
+            <a href="contact.html" class="button">Get Started</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm Installation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Fire Alarm Installation</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Comprehensive Fire Alarm Installation Services</h2>
+            <p>
+                Protect your business with our state-of-the-art fire alarm installation services.
+                At Atlantis Fire and Security, we specialize in designing, installing, and maintaining fire alarm
+                systems tailored to meet the unique needs of your commercial property.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Licensed and certified technicians with years of experience.</li>
+                <li>Customized fire alarm systems designed for your property.</li>
+                <li>Compliance with local and national fire safety codes.</li>
+                <li>Top-tier brands and equipment for reliable performance.</li>
+                <li>24/7 monitoring and maintenance support.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Our Process</h2>
+            <ol>
+                <li><strong>Assessment:</strong> We evaluate your property's fire safety requirements.</li>
+                <li><strong>Design:</strong> Our team develops a custom fire alarm system plan.</li>
+                <li><strong>Installation:</strong> We install your system with minimal disruption to your operations.</li>
+                <li><strong>Testing:</strong> Comprehensive testing ensures your system is fully operational.</li>
+                <li><strong>Support:</strong> We provide ongoing maintenance and 24/7 support for peace of mind.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://hrsschicago.com/wp-content/uploads/2016/05/high-tech-fire-alarm-systems.jpg" alt="High-Tech Fire Alarm System">
+                <img src="https://hy-techsolutions.com/wp-content/uploads/2016/05/fire-alarm-systems.jpg" alt="Fire Alarm Control Panel">
+                <img src="https://terraquestint.com/wp-content/uploads/2016/05/fire-alarm-system.jpg" alt="Advanced Fire Detection System">
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Ready to enhance the safety of your property? Contact us today for a free consultation and estimate.
+            </p>
+            <a href="contact.html" class="button">Schedule a Consultation</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

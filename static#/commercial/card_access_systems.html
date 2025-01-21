@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Access Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Card Access Systems</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Advanced Card Access Systems</h2>
+            <p>
+                Enhance the security of your business with advanced card access systems from Atlantis Fire and Security.
+                Our solutions provide secure and convenient access control, ensuring that only authorized personnel can
+                enter restricted areas.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features of Our Card Access Systems</h2>
+            <ul>
+                <li>Customizable access levels for employees and visitors.</li>
+                <li>Integration with existing security and surveillance systems.</li>
+                <li>Real-time monitoring and access logs.</li>
+                <li>Contactless card readers for enhanced convenience.</li>
+                <li>Mobile app integration for remote access control.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Benefits of Card Access Systems</h2>
+            <ul>
+                <li>Improved security and controlled entry to sensitive areas.</li>
+                <li>Enhanced convenience with contactless and mobile access.</li>
+                <li>Detailed reporting for compliance and auditing.</li>
+                <li>Scalable solutions for businesses of all sizes.</li>
+                <li>Reduced risk of lost or stolen keys.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://www.borer.co.uk/wp-content/uploads/2016/05/smart-card-access-control.jpg" alt="Smart Card Access Control">
+                <img src="https://pricesecuritysystems.com/wp-content/uploads/2020/01/key-card-access-systems.jpg" alt="Key Card Access Systems">
+                <img src="https://www.getgenea.com/wp-content/uploads/2020/01/card-access-systems.jpg" alt="Card Access Systems">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Secure your business with advanced card access technology. Contact us today to schedule a consultation
+                and learn more about our customizable solutions.
+            </p>
+            <a href="contact.html" class="button">Get Started</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm Service and Maintenance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Fire Alarm Service and Maintenance</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Reliable Fire Alarm Service and Maintenance</h2>
+            <p>
+                Keep your fire alarm systems in optimal condition with professional service and maintenance
+                from Atlantis Fire and Security. Regular maintenance ensures compliance with safety codes,
+                extends the life of your equipment, and provides peace of mind knowing your systems are
+                ready when you need them most.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Maintenance Services</h2>
+            <ul>
+                <li>Routine inspections and functionality testing.</li>
+                <li>Battery replacements and power supply checks.</li>
+                <li>Cleaning and calibration of smoke and heat detectors.</li>
+                <li>Repairs and replacement of faulty components.</li>
+                <li>Compliance reporting and documentation.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Our Services?</h2>
+            <ul>
+                <li>Experienced and certified technicians.</li>
+                <li>Use of high-quality, manufacturer-approved parts.</li>
+                <li>24/7 emergency repair services available.</li>
+                <li>Tailored maintenance plans to meet your needs.</li>
+                <li>Commitment to safety and customer satisfaction.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.MxBibqiKOESV1cNUcSuzdwHaE8&pid=Api" alt="Fire Alarm Systems - Hy-Tech Solutions">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.IH3RBquO7gAV8ezT-TweTgHaCn&pid=Api" alt="Fire Alarm Systems - Fire Safety Tech">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.X2Wjbb7J9mvrEsdLF31I0gHaE8&pid=Api" alt="Fire Alarm Maintenance & Servicing">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.qgYvWDiipjnTW7T4pW-EcgHaE7&pid=Api" alt="Fire Alarm System Toronto">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Ensure your fire alarm systems are always operational. Contact us today to schedule
+                service or learn more about our maintenance plans.
+            </p>
+            <a href="contact.html" class="button">Schedule a Service</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

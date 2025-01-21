@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level and Flood Detection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Water Level and Flood Detection</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Reliable Water Level and Flood Detection Systems</h2>
+            <p>
+                Protect your home and property from water damage with advanced flood detection systems from
+                Atlantis Fire and Security. Our cutting-edge technology ensures early detection of water level
+                changes, giving you the time to act and prevent costly damages.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features of Our Flood Detection Systems</h2>
+            <ul>
+                <li>Early detection of rising water levels and leaks.</li>
+                <li>Smart sensors for real-time alerts to your mobile device.</li>
+                <li>Seamless integration with existing smart home systems.</li>
+                <li>Battery backups to ensure functionality during power outages.</li>
+                <li>24/7 professional monitoring for immediate response.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Customized solutions tailored to your property's needs.</li>
+                <li>Expert installation by licensed professionals.</li>
+                <li>Reliable technology from top industry brands.</li>
+                <li>Comprehensive maintenance and support services.</li>
+                <li>Decades of experience in home safety and security.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://www.cornerstoneprotection.com/wp-content/uploads/2018/01/flood-sensors-benefits.jpg" alt="Flood Sensors Alarm">
+                <img src="https://www.noabe.com/help/images/flood-detector-and-security-camera.jpg" alt="Flood Detector and Security Camera">
+                <img src="https://neat-group.com/wp-content/uploads/2019/07/flood-detector.jpg" alt="Flood Detector">
+                <img src="https://minneapolishub.com/wp-content/uploads/2022/01/flood-detection-systems.jpg" alt="Flood Detection Systems">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Don’t let water damage disrupt your life. Contact us today for a free consultation
+                and learn how our flood detection systems can safeguard your property.
+            </p>
+            <a href="contact.html" class="button">Get Started</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

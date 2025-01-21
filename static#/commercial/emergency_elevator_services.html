@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Elevator Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Emergency Elevator Services</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Reliable Emergency Elevator Services</h2>
+            <p>
+                Ensure the safety and reliability of your building's elevators with our comprehensive emergency elevator services.
+                At Atlantis Fire and Security, we specialize in addressing unexpected elevator issues promptly and efficiently.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Emergency Elevator Services Include:</h2>
+            <ul>
+                <li><strong>24/7 Rapid Response:</strong> Our team is available around the clock to minimize downtime and ensure passenger safety.</li>
+                <li><strong>Expert Technicians:</strong> Certified professionals trained to diagnose and repair a wide range of elevator issues.</li>
+                <li><strong>Preventative Maintenance:</strong> Regular inspections to prevent malfunctions and extend system lifespan.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Reliability:</strong> Prompt service to keep your operations running smoothly.</li>
+                <li><strong>Safety First:</strong> Repairs and services meet or exceed industry standards.</li>
+                <li><strong>Transparent Communication:</strong> Detailed reports and recommendations for all services.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.yOxuNk0sq3VTZmPtfu9ktQHaFj&pid=Api" alt="Emergency Elevator Services">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.RiaVx3UHAguwDSvSRdXiZgHaG1&pid=Api" alt="24/7 Elevator Service">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.QDzn7JDFvGVFq4A9nOiP6gHaEK&pid=Api" alt="Reliable Elevator Repair">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Don't let elevator issues disrupt your day. Contact Atlantis Fire and Security for reliable emergency elevator services.
+                Our team is ready to assist you 24/7.
+            </p>
+            <a href="contact.html" class="button">Get Started</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

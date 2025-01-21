@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Fire Alarms</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Home Fire Alarms</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Reliable Home Fire Alarm Systems</h2>
+            <p>
+                Protect your loved ones and property with advanced fire alarm systems from Atlantis Fire and Security.
+                Our home fire alarms are designed for early detection and rapid response, providing you with peace of mind
+                and enhanced safety at all times.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features of Our Fire Alarms</h2>
+            <ul>
+                <li>Smoke and heat detection for comprehensive coverage.</li>
+                <li>High-decibel alarms to alert everyone in your home.</li>
+                <li>Integration with smart home systems for remote monitoring.</li>
+                <li>Battery backups to ensure functionality during power outages.</li>
+                <li>24/7 professional monitoring services.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Atlantis Fire and Security?</h2>
+            <ul>
+                <li>Expert installation by certified technicians.</li>
+                <li>Customizable systems tailored to your home's needs.</li>
+                <li>Regular maintenance and testing for optimal performance.</li>
+                <li>Advanced technology from industry-leading brands.</li>
+                <li>Dedicated customer support for all your fire safety needs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://damiaglobalservices.com/fire-alarm-systems/" alt="Fire Alarm Systems - Damia Global Services">
+                <img src="https://www.norelservice.com/our-services/fire-alarm-systems" alt="Fire Alarm Systems - Norel Service">
+                <img src="https://terraquestint.com/fire-alarm-system/" alt="Fire Alarm System - Terraquest International">
+                <img src="https://firesystems.net/inspections/fire-alarms-monitoring/" alt="Fire Alarm Inspection - Fire Systems">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Don’t wait until it’s too late. Contact us today to schedule a free consultation and
+                learn how our fire alarm systems can protect your home and family.
+            </p>
+            <a href="contact.html" class="button">Schedule a Consultation</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

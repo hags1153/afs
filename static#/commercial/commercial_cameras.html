@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Security Cameras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Commercial Security Cameras</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>High-Performance Commercial Security Cameras</h2>
+            <p>
+                Monitor and protect your business with our advanced commercial security camera systems.
+                Designed for reliability and clarity, our cameras provide the surveillance you need to keep
+                your property secure and your operations running smoothly.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features of Our Security Cameras</h2>
+            <ul>
+                <li>High-definition video quality with zoom and pan capabilities.</li>
+                <li>Night vision for clear surveillance in low-light conditions.</li>
+                <li>IP-based cameras with remote access via mobile or desktop.</li>
+                <li>Cloud-based or NVR storage options for video footage.</li>
+                <li>Smart motion detection and alert systems.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Custom Camera Solutions</h2>
+            <p>
+                Every business has unique surveillance needs. At Atlantis Fire and Security, we provide customized
+                camera solutions that are tailored to your property and security requirements. From small businesses
+                to large enterprises, we've got you covered.
+            </p>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://www.securityalarm.com/wp-content/uploads/2018/01/commercial-fire-alarm-systems.jpg" alt="Commercial Fire Alarm Systems">
+                <img src="https://commercialfire.com/wp-content/uploads/2010/12/commercial-fire-services.jpg" alt="Commercial Fire Services">
+                <img src="https://www.wcmcbrideelectric.com/wp-content/uploads/2020/01/fire-and-security-systems.jpg" alt="Fire and Security Systems">
+                <img src="https://synergyfireandsecurity.co.uk/wp-content/uploads/2023/01/commercial-fire-and-security.jpg" alt="Commercial Fire and Security">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Secure your business with our advanced security camera systems. Contact us today to schedule a
+                consultation and learn more about our customizable solutions.
+            </p>
+            <a href="contact.html" class="button">Schedule a Consultation</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

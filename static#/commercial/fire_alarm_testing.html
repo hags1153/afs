@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm and Sprinkler Testing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Fire Alarm and Sprinkler Testing</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Comprehensive Fire Alarm and Sprinkler Testing Services</h2>
+            <p>
+                Ensure the safety and compliance of your commercial property with our professional fire alarm and
+                sprinkler testing services. At Atlantis Fire and Security, we help you meet regulatory standards and
+                ensure your systems are always ready in case of an emergency.
+            </p>
+        </section>
+
+        <section>
+            <h2>Benefits of Regular Testing</h2>
+            <ul>
+                <li>Compliance with local fire safety codes and regulations.</li>
+                <li>Early detection of potential system malfunctions.</li>
+                <li>Improved safety for employees and occupants.</li>
+                <li>Peace of mind knowing your systems are fully operational.</li>
+                <li>Reduced risk of costly damages and liabilities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Our Testing Services</h2>
+            <ul>
+                <li>Inspection and functional testing of fire alarms.</li>
+                <li>Pressure and flow testing for sprinkler systems.</li>
+                <li>Battery and power supply testing for reliability.</li>
+                <li>Comprehensive reporting and documentation for compliance.</li>
+                <li>Recommendations for repairs and upgrades if needed.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/fire_alarm_testing.jpeg" alt="Fire Alarm Testing">
+                <img src="images/sprinkler_testing.jpeg" alt="Sprinkler System Testing">
+                <img src="images/compliance_check.jpeg" alt="Compliance Check">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Stay compliant and ensure safety with our fire alarm and sprinkler testing services.
+                Contact us today to schedule a testing appointment.
+            </p>
+            <a href="contact.html" class="button">Schedule a Testing</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

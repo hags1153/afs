@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Security Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Commercial Security Systems</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Advanced Commercial Security Systems</h2>
+            <p>
+                Protect your business with cutting-edge commercial security systems from Atlantis Fire and Security.
+                Our systems are designed to safeguard your property, assets, and employees with the latest technology
+                and unmatched reliability.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features of Our Commercial Security Systems</h2>
+            <ul>
+                <li>High-definition surveillance cameras with night vision.</li>
+                <li>Smart access control systems for restricted entry.</li>
+                <li>24/7 monitoring for immediate response to incidents.</li>
+                <li>Remote access via mobile apps for real-time control and monitoring.</li>
+                <li>Integration with other security and fire safety systems.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Custom Security Solutions</h2>
+            <p>
+                Every business is unique, and so are its security needs. We offer customized security solutions
+                tailored to your specific requirements, ensuring maximum protection and peace of mind.
+            </p>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://forestsecurity.com/wp-content/uploads/2019/01/large-commercial-business-security-solutions.jpg" alt="Large Commercial Business Security Solutions">
+                <img src="https://inbound.usisecurity.com/hubfs/USI%20Blog%20Images/commercial-security-camera-system.jpg" alt="Commercial Security Camera System">
+                <img src="https://www.protection1.com.au/wp-content/uploads/2018/05/commercial-security-cameras.jpg" alt="Commercial Security Cameras">
+                <img src="https://www.ssscamera.com/wp-content/uploads/2019/01/commercial-security-systems.jpg" alt="Commercial Security Systems">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Enhance your business security with our advanced systems. Contact us today to schedule a free consultation
+                and learn more about our customizable solutions.
+            </p>
+            <a href="contact.html" class="button">Get Started</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Fire Alarm Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Commercial Fire Alarm Systems</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Comprehensive Commercial Fire Alarm Solutions</h2>
+            <p>
+                Safeguard your business and employees with advanced fire alarm systems designed specifically for
+                commercial properties. At Atlantis Fire and Security, we deliver reliable and efficient fire alarm
+                solutions that meet regulatory requirements and exceed safety standards.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features of Our Commercial Fire Alarm Systems</h2>
+            <ul>
+                <li>Compliant with local and national fire safety codes.</li>
+                <li>Advanced smoke, heat, and flame detection technologies.</li>
+                <li>Integrated systems for seamless monitoring and control.</li>
+                <li>Customizable solutions for businesses of all sizes.</li>
+                <li>24/7 monitoring and rapid response capabilities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Our Fire Alarm Services</h2>
+            <ul>
+                <li>System design and installation by certified professionals.</li>
+                <li>Routine maintenance and annual testing to ensure compliance.</li>
+                <li>Emergency repairs and on-demand support services.</li>
+                <li>System upgrades and integration with modern technologies.</li>
+                <li>Comprehensive training for your staff on system operation.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://www.securityalarm.com/wp-content/uploads/2018/01/commercial-fire-alarm-systems.jpg" alt="Commercial Fire Alarm Systems">
+                <img src="https://commercialfire.com/wp-content/uploads/2010/12/commercial-fire-services.jpg" alt="Commercial Fire Services">
+                <img src="https://www.wcmcbrideelectric.com/wp-content/uploads/2020/01/fire-and-security-systems.jpg" alt="Fire and Security Systems">
+                <img src="https://synergyfireandsecurity.co.uk/wp-content/uploads/2023/01/commercial-fire-and-security.jpg" alt="Commercial Fire and Security">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Protect your commercial property with our expert fire alarm solutions. Contact us today to learn more
+                and schedule a consultation.
+            </p>
+            <a href="contact.html" class="button">Get Started</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>

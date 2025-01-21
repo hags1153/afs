@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Security Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+        <h1>Home Security Systems</h1>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navContainer = document.createElement("div");
+                    navContainer.innerHTML = data;
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        });
+    </script>
+
+    <div class="container">
+        <section>
+            <h2>Comprehensive Home Security Solutions</h2>
+            <p>
+                At Atlantis Fire and Security, we understand that your home is your sanctuary.
+                That’s why we offer cutting-edge home security systems designed to keep you, your family,
+                and your belongings safe. From advanced surveillance to smart access control, our systems
+                are customized to meet your specific needs.
+            </p>
+        </section>
+
+        <section>
+            <h2>Features of Our Home Security Systems</h2>
+            <ul>
+                <li>High-definition security cameras with night vision.</li>
+                <li>Smart door and window sensors for real-time alerts.</li>
+                <li>Integrated mobile app for remote monitoring and control.</li>
+                <li>Motion detectors and advanced intrusion detection systems.</li>
+                <li>24/7 professional monitoring services for rapid response.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Atlantis Fire and Security?</h2>
+            <ul>
+                <li>Experienced and certified technicians.</li>
+                <li>State-of-the-art equipment from trusted brands.</li>
+                <li>Customizable solutions tailored to your home's layout and security needs.</li>
+                <li>Seamless integration with smart home systems.</li>
+                <li>Dedicated customer support and maintenance services.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://www.safety.com/diy-home-security-guide/" alt="Smart Home Security System">
+                <img src="https://www.homedepot.com/p/IDEAL-Security-7-Piece-Wireless-Home-Security-Alarm-System-with-Telephone-Notification-Dialer-SK634/204612643" alt="Wireless Home Security Alarm System">
+                <img src="https://ultimatesecurehome.com/best-self-monitored-home-security-systems/" alt="Self Monitored Home Security System">
+                <img src="https://kileyyemelita.pages.dev/esyphaj-best-home-security-cameras-2024-wireless-photos-itdumki/" alt="Wireless Home Security Camera">
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                Take the first step toward a safer home. Contact us today to schedule a free consultation
+                and learn more about our home security solutions.
+            </p>
+            <a href="contact.html" class="button">Schedule a Consultation</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>
