@@ -13,28 +13,16 @@
         <p>Your trusted partner in fire alarm and security services in Massachusetts.</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li>
-                <a href="residential.html">Residential</a>
-                <ul class="dropdown">
-                    <li><a href="service1.html">Service 1</a></li>
-                    <li><a href="service2.html">Service 2</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="commercial.html">Commercial</a>
-                <ul class="dropdown">
-                    <li><a href="service3.html">Service 3</a></li>
-                    <li><a href="service4.html">Service 4</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<div id="navbar"></div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
 
 
     <div class="container">
