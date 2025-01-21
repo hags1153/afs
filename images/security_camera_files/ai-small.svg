@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1.1"
+   viewBox="0 0 32 32"
+   id="svg22"
+   sodipodi:docname="ai-small.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs26" />
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:zoom="24.34375"
+     inkscape:cx="15.979461"
+     inkscape:cy="16"
+     inkscape:window-width="1915"
+     inkscape:window-height="1003"
+     inkscape:window-x="346"
+     inkscape:window-y="313"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg22" />
+  <g
+     transform="matrix(1.1565708,0,0,1.1520353,-2.5051323,-3.4319132)"
+     fill="#ffffff"
+     stroke-width="0.866339"
+     id="g1400" />
+  <g
+     id="g2959"
+     transform="matrix(1.2500522,0,0,1.2500624,0.99874611,1.0275001)"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:17.0658;stroke-opacity:1">
+    <path
+       d="M 23.200034,11.29476 A 11.210267,11.210267 0 1 0 12.0159,23.198494 h 6.0508 a 5.1398669,5.1398669 0 0 0 5.133334,-5.133333 v -6.682667 z m -2.8,6.770401 A 2.3333334,2.3333334 0 0 1 18.0667,20.398494 H 12.0159 A 8.438267,8.438267 0 0 1 5.7336332,17.588227 8.3309337,8.3309337 0 0 1 3.6550997,11.02316 8.435467,8.435467 0 0 1 10.9239,3.6666269 a 8.8517337,8.8517337 0 0 1 1.0948,-0.068133 8.337467,8.337467 0 0 1 5.3564,1.9282668 8.435467,8.435467 0 0 1 3.024934,5.9014663 z"
+       id="path2945"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:17.0658;stroke-opacity:1" />
+    <path
+       d="m 9.5,11 h 3 a 1.5,1.5 0 0 0 0,-3 h -3 a 1.5,1.5 0 0 0 0,3 z"
+       id="path2947"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:17.0658;stroke-opacity:1" />
+    <path
+       d="m 16.5,13 h -7 a 1.5,1.5 0 0 0 0,3 h 7 a 1.5,1.5 0 0 0 0,-3 z"
+       id="path2949"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:17.0658;stroke-opacity:1" />
+  </g>
+</svg>
