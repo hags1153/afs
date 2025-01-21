@@ -12,16 +12,22 @@
             margin: 20px auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
+            border-radius: 8px;
         }
 
         .form-container {
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        form {
+        .form-row {
             display: flex;
-            flex-wrap: wrap;
             gap: 15px;
+        }
+
+        .form-row input {
+            flex: 1;
         }
 
         form label {
@@ -32,25 +38,22 @@
         }
 
         form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
             font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
-            padding: 10px;
         }
 
-        form input {
-            width: calc(50% - 10px);
-        }
-
-        form textarea {
-            width: 100%;
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: #444;
         }
 
         form button {
             background-color: #444;
             color: #fff;
             border: none;
-            padding: 10px 20px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -61,16 +64,16 @@
 
         .contact-details {
             margin-top: 20px;
-            font-size: 0.9rem;
-            color: #333;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 10px;
         }
 
         .contact-details p {
             margin: 5px 0;
-        }
-
-        .contact-details strong {
-            color: #444;
         }
     </style>
 </head>
@@ -78,7 +81,7 @@
     <header>
         <img src="../../images/afs_logo.png" alt="Atlantis Fire and Security Logo">
         <h1>Contact Us</h1>
-        <p>Contact us with any general inquiries or to schedule a free consultation/estimate now!</p>
+        <p>Contact us with any general inquiries or to schedule a free consultation or estimate!</p>
     </header>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -95,17 +98,29 @@
     <main>
         <section>
             <h2>Get in Touch</h2>
-            <p>We would love to hear from you! Please use the form below to reach out to us.</p>
             <div class="form-container">
                 <form id="contactForm" onsubmit="sendEmail(event)">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="from_first" required>
+                    <div class="form-row">
+                        <div>
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="from_first" required>
+                        </div>
+                        <div>
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="from_last" required>
+                        </div>
+                    </div>
 
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="from_last" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="from_email" required>
+                    <div class="form-row">
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="from_email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="from_phone" required>
+                        </div>
+                    </div>
 
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
@@ -116,13 +131,13 @@
         </section>
         <section class="contact-details">
             <h2>Contact Details</h2>
-            <p><strong>Address:</strong> 123 Main Street, Suite 100, Atlantis City, MA 01234</p>
-            <p><strong>Phone:</strong> (123) 456-7890</p>
-            <p><strong>Email:</strong> contact@atlantisfireandsecurity.com</p>
+            <p><strong>Address:</strong> 14 Friend Street, Beverly, MA 01915</p>
+            <p><strong>Phone:</strong> (978) 810-7248</p>
+            <p><strong>Email:</strong> sean@atlantisfireandsecurity.com</p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Atlantis Fire and Security Services. All rights reserved.</p>
+        <p>&copy; 2000 Atlantis Fire and Security Services. All rights reserved.</p>
     </footer>
 
     <!-- Include the EmailJS library -->
