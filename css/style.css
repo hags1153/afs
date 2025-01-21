@@ -1,76 +1,102 @@
 /* Centering the entire page content */
 body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Allows for natural flow from top to bottom */
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #1f2c3c;
-    color: #ffffff;
+    background-color: #1f2c3c; /* Main background color */
+    color: #ffffff; /* Text color */
 }
 
 /* Centering the header */
 header {
     background-color: #222d3b;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
     width: 100%;
+    border-bottom: 3px solid #2a3a4f; /* Header border for styling */
 }
 
 header img {
-    height: 50px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
 /* Navigation bar */
 nav {
     width: 100%;
-    max-width: 1200px; /* Restricts width for better readability */
+    max-width: 1200px;
     margin: 0 auto;
-    border: 2px solid #1f2c3c;
     padding: 10px;
     background-color: #1f2c3c;
+    border-bottom: 2px solid #2a3a4f; /* Match theme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
     display: flex;
-    justify-content: center; /* Centers the nav links */
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li:hover a {
+    background-color: #2a3a4f;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
 /* Main content container */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     width: 90%;
-    margin: 20px auto;
-    background-color: #202c3a;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-    text-align: left; /* Left-aligns text inside the container */
-    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin: 30px auto;
+    background-color: #ffffff; /* Bright background for contrast */
+    color: #1f2c3c; /* Dark text for readability */
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Left-aligns text inside */
+    border-radius: 12px;
+}
+
+/* Styling for headings */
+.container h2 {
+    text-align: center;
+    color: #1f2c3c;
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 /* Styling for bullet points */
 ul {
     list-style-type: disc;
-    margin-left: 20px; /* Indent bullet points */
-    padding-left: 20px;
+    margin: 15px 0 15px 40px; /* Indent bullet points */
+    line-height: 1.8;
 }
 
 li {
-    margin-bottom: 10px; /* Add spacing between items */
-    line-height: 1.5; /* Better readability */
-}
-
-/* Optional: Headings inside the container */
-.container h2 {
-    text-align: center; /* Keep headings centered if needed */
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -79,82 +105,32 @@ footer {
     background-color: #222d3b;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    border-top: 2px solid #2a3a4f;
     position: fixed;
     bottom: 0;
 }
 
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff !important; /* Force solid white text color */
-    font-weight: bold; /* Bold text */
-    padding: 10px 15px;
-    display: block;
-}
-
-nav ul li:hover {
-    background-color: #2a3a4f; /* Slightly lighter blue for hover */
-}
-
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2a3a4f; /* Dropdown matches hover color */
-    border: 1px solid #1f2c3c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-nav ul li .dropdown li a {
-    color: #ffffff !important; /* Force solid white for dropdown items */
-    font-weight: bold;
-    padding: 8px 12px;
-    display: block;
-    text-decoration: none;
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #555;
-}
-
+/* Contact form styling */
 .contact-form-container {
     text-align: center;
-    background-color: #1f2c3c; /* Matches the site's theme */
-    padding: 20px;
+    background-color: #f8f9fa; /* Light background for form contrast */
+    padding: 30px;
     border-top: 2px solid #2a3a4f;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form-container h2 {
-    color: #ffffff;
+    color: #1f2c3c;
+    font-size: 1.8rem;
     margin-bottom: 15px;
-    font-size: 1.5rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     margin: 0 auto;
     max-width: 600px;
 }
@@ -162,8 +138,7 @@ nav ul li:hover .dropdown {
 .contact-form label {
     display: block;
     font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 5px;
+    color: #1f2c3c;
 }
 
 .contact-form input,
@@ -171,7 +146,7 @@ nav ul li:hover .dropdown {
 .contact-form button {
     width: 100%;
     max-width: 500px;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -181,17 +156,20 @@ nav ul li:hover .dropdown {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #2a3a4f;
+    border-color: #1f2c3c;
+    background-color: #f9fafb;
 }
 
 .contact-form button {
-    background-color: #444;
-    color: #fff;
+    background-color: #1f2c3c;
+    color: #ffffff;
     border: none;
+    padding: 12px;
     cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #555;
+    background-color: #2a3a4f;
 }
