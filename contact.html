@@ -157,7 +157,8 @@
                 <div class="form-row full-width">
                     <div>
                         <label for="autocomplete">Address:</label>
-                        <input id="autocomplete" placeholder="Start typing your address" type="text" oninput="fetchAddressSuggestions(event)">
+                        <input id="autocomplete" placeholder="Start typing your address" type="text"
+                               oninput="fetchAddressSuggestions(event)">
                         <ul id="suggestions"></ul>
                     </div>
                 </div>
@@ -214,7 +215,9 @@
         if (query.length < 3) return;
 
         try {
-            const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&addressdetails=1`);
+            const response = await fetch(
+                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&addressdetails=1&bounded=1&viewbox=-73.508142,42.886589,-69.928393,41.237964`
+            );
             const results = await response.json();
 
             results.forEach((result) => {
@@ -232,18 +235,19 @@
         }
     };
 
-    const populateAddressFields = (result) => {
-        const address = result.address;
 
-        document.getElementById('street').value = `${address.house_number || ''} ${address.road || ''}`.trim();
-        document.getElementById('city').value = address.city || address.town || address.village || '';
-        document.getElementById('state').value = address.state || '';
-        document.getElementById('zip').value = address.postcode || '';
+        const populateAddressFields = (result) => {
+            const address = result.address;
 
-        document.getElementById('autocomplete').value = result.display_name;
-        document.getElementById('suggestions').innerHTML = '';
-        document.getElementById('suggestions').style.display = 'none';
-    };
+            document.getElementById('street').value = `${address.house_number || ''} ${address.road || ''}`.trim();
+            document.getElementById('city').value = address.city || address.town || address.village || '';
+            document.getElementById('state').value = address.state || '';
+            document.getElementById('zip').value = address.postcode || '';
+
+            document.getElementById('autocomplete').value = result.display_name;
+            document.getElementById('suggestions').innerHTML = '';
+            document.getElementById('suggestions').style.display = 'none';
+        };
 </script>
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
