@@ -195,3 +195,28 @@ nav ul li:hover .dropdown {
 .contact-form button:hover {
     background-color: #555;
 }
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.service-content {
+    flex: 1;
+    text-align: left;
+}
+
+.service-image {
+    flex: 0 0 300px; /* Fixed width for images */
+    text-align: center;
+}
+
+.service-graphic {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
