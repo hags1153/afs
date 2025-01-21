@@ -51,7 +51,26 @@ nav ul {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #ffffff;
-    text-align: center; /* Centers text within the container */
+    text-align: left; /* Left-aligns text inside the container */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Styling for bullet points */
+ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Indent bullet points */
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px; /* Add spacing between items */
+    line-height: 1.5; /* Better readability */
+}
+
+/* Optional: Headings inside the container */
+.container h2 {
+    text-align: center; /* Keep headings centered if needed */
+    margin-bottom: 15px;
 }
 
 /* Footer */
@@ -64,7 +83,6 @@ footer {
     position: fixed;
     bottom: 0;
 }
-
 
 nav ul li {
     position: relative;
