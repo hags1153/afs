@@ -13,14 +13,13 @@
         <p>A deeper look into how Atlantis Fire and Security came to be what it is today.</p>
     </header>
     <script>
-        // Dynamically load the navbar
         document.addEventListener("DOMContentLoaded", function() {
             fetch("navbar.html")
                 .then(response => response.text())
                 .then(data => {
                     const navContainer = document.createElement("div");
                     navContainer.innerHTML = data;
-                    document.body.insertBefore(navContainer.firstChild, document.body.firstChild);
+                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
                 })
                 .catch(error => console.error("Error loading the navbar:", error));
         });
