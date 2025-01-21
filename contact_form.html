@@ -1,0 +1,63 @@
+<section>
+    <h2>Get in Touch</h2>
+    <div class="form-container">
+        <form id="contactForm" onsubmit="sendEmail(event)">
+            <div class="form-row">
+                <div>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="from_first" required>
+                </div>
+                <div>
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="from_last" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="from_email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="from_phone" required>
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div>
+                    <label for="autocomplete">Address:</label>
+                    <input id="autocomplete" placeholder="Start typing your address" type="text" oninput="fetchAddressSuggestions(event)">
+                    <ul id="suggestions"></ul>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="street">Street:</label>
+                    <input id="street" name="street" type="text" placeholder="123 Main St" readonly>
+                </div>
+                <div>
+                    <label for="city">City/Town:</label>
+                    <input id="city" name="city" type="text" placeholder="Boston" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="state">State:</label>
+                    <input id="state" name="state" type="text" placeholder="MA" readonly>
+                </div>
+                <div>
+                    <label for="zip">ZIP Code:</label>
+                    <input id="zip" name="zip" type="text" placeholder="02111" readonly>
+                </div>
+            </div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
