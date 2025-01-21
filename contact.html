@@ -11,7 +11,8 @@
             background-color: #fff;
             margin: 20px auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 100%; /* Set max width for flexibility */
+            width: 90%; /* Ensure it fits on smaller screens */
             border-radius: 8px;
         }
 
@@ -24,16 +25,17 @@
         .form-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px; /* Increase gap for better spacing */
+            justify-content: space-between;
         }
 
         .form-row div {
-            flex: 1 1 calc(50% - 10px); /* Ensure two inputs per row */
-            min-width: 150px;
+            flex: 1 1 calc(50% - 20px); /* Make two fields fit side by side */
+            min-width: 200px; /* Prevent fields from shrinking too much */
         }
 
         .form-row.full-width div {
-            flex: 1 1 100%; /* Full-width input for larger fields */
+            flex: 1 1 100%; /* Full width for long inputs */
         }
 
         form label {
@@ -49,6 +51,7 @@
             font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box; /* Prevent overflow issues */
         }
 
         form input:focus, form textarea:focus {
@@ -62,7 +65,6 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: 100%;
         }
 
         form button:hover {
@@ -83,100 +85,101 @@
             margin: 5px 0;
         }
     </style>
+
 </head>
 <body>
-    <header>
-        <img src="../../images/afs_logo.png" alt="Atlantis Fire and Security Logo">
-        <h1>Contact Us</h1>
-        <p>Contact us with any general inquiries or to schedule a free consultation or estimate!</p>
-    </header>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    const navContainer = document.createElement("div");
-                    navContainer.innerHTML = data;
-                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        });
-    </script>
-    <main>
-        <section>
-            <h2>Get in Touch</h2>
-            <div class="form-container">
-                <form id="contactForm" onsubmit="sendEmail(event)">
-                    <div class="form-row">
-                        <div>
-                            <label for="first_name">First Name:</label>
-                            <input type="text" id="first_name" name="from_first" required>
-                        </div>
-                        <div>
-                            <label for="last_name">Last Name:</label>
-                            <input type="text" id="last_name" name="from_last" required>
-                        </div>
+<header>
+    <img src="../../images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+    <h1>Contact Us</h1>
+    <p>Contact us with any general inquiries or to schedule a free consultation or estimate!</p>
+</header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                const navContainer = document.createElement("div");
+                navContainer.innerHTML = data;
+                document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+            })
+            .catch(error => console.error("Error loading the navbar:", error));
+    });
+</script>
+<main>
+    <section>
+        <h2>Get in Touch</h2>
+        <div class="form-container">
+            <form id="contactForm" onsubmit="sendEmail(event)">
+                <div class="form-row">
+                    <div>
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="from_first" required>
                     </div>
-
-                    <div class="form-row">
-                        <div>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="from_email" required>
-                        </div>
-                        <div>
-                            <label for="phone">Phone Number:</label>
-                            <input type="tel" id="phone" name="from_phone" required>
-                        </div>
+                    <div>
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="from_last" required>
                     </div>
+                </div>
 
-                    <div class="form-row full-width">
-                        <div>
-                            <label for="address">Address:</label>
-                            <input type="text" id="address" name="from_address" required>
-                        </div>
+                <div class="form-row">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="from_email" required>
                     </div>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="from_phone" required>
+                    </div>
+                </div>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="form-row full-width">
+                    <div>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="from_address" required>
+                    </div>
+                </div>
 
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-            <div class="contact-details">
-                <h3>Contact Details</h3>
-                <p><strong>Address:</strong> 123 Main Street, Suite 100, Atlantis City, MA 01234</p>
-                <p><strong>Phone:</strong> (123) 456-7890</p>
-                <p><strong>Email:</strong> contact@atlantisfireandsecurity.com</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Atlantis Fire and Security Services. All rights reserved.</p>
-    </footer>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("R4Y2W9ztgoU24yQeC");
-        })();
+        <div class="contact-details">
+            <h3>Contact Details</h3>
+            <p><strong>Address:</strong> 123 Main Street, Suite 100, Atlantis City, MA 01234</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> contact@atlantisfireandsecurity.com</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 Atlantis Fire and Security Services. All rights reserved.</p>
+</footer>
 
-        function sendEmail(event) {
-            event.preventDefault();
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("R4Y2W9ztgoU24yQeC");
+    })();
 
-            const form = event.target;
+    function sendEmail(event) {
+        event.preventDefault();
 
-            emailjs.sendForm('service_dug2aux', 'template_e042o8u', form)
-                .then((response) => {
-                    console.log('Email sent successfully:', response.status, response.text);
-                    alert('Message sent successfully!');
-                    window.location.href = 'contact_success.html';
-                })
-                .catch((error) => {
-                    console.error('Failed to send message:', error);
-                    alert('Failed to send message. Please try again.');
-                });
-        }
-    </script>
+        const form = event.target;
+
+        emailjs.sendForm('service_dug2aux', 'template_e042o8u', form)
+            .then((response) => {
+                console.log('Email sent successfully:', response.status, response.text);
+                alert('Message sent successfully!');
+                window.location.href = 'contact_success.html';
+            })
+            .catch((error) => {
+                console.error('Failed to send message:', error);
+                alert('Failed to send message. Please try again.');
+            });
+    }
+</script>
 </body>
 </html>
