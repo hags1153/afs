@@ -1,39 +1,70 @@
-/* style.css - Customized using the extracted colors from the logo */
-
+/* Centering the entire page content */
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Allows for natural flow from top to bottom */
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #1f2c3c; /* Main background color */
-    color: #ffffff; /* Text color for good contrast */
+    background-color: #1f2c3c;
+    color: #ffffff;
 }
 
+/* Centering the header */
 header {
-    background-color: #222d3b; /* Slightly darker for the header */
+    background-color: #222d3b;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
+    width: 100%;
 }
 
 header img {
     height: 50px;
 }
 
+/* Navigation bar */
 nav {
-    border: 2px solid #1f2c3c; /* Consistent blue theme for border */
+    width: 100%;
+    max-width: 1200px; /* Restricts width for better readability */
+    margin: 0 auto;
+    border: 2px solid #1f2c3c;
     padding: 10px;
-    margin-bottom: 20px;
-    background-color: #1f2c3c; /* Matches the blue theme */
+    background-color: #1f2c3c;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center; /* Centers the nav links */
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
 }
+
+/* Main content container */
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #202c3a;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    text-align: center; /* Centers text within the container */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #222d3b;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+}
+
 
 nav ul li {
     position: relative;
@@ -72,26 +103,6 @@ nav ul li .dropdown li a {
 
 nav ul li:hover .dropdown {
     display: block;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-    background-color: #202c3a; /* Slightly muted for the main content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-}
-
-footer {
-    background-color: #222d3b; /* Match the header color */
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 .button {
