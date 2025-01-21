@@ -7,32 +7,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
-        <h1>About Us</h1>
-        <p>A deeper look into how Atlantis Fire and Security came to be what it is today.</p>
-    </header>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    const navContainer = document.createElement("div");
-                    navContainer.innerHTML = data;
-                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        });
-    </script>
-    <div class="container">
-        <h1>About Us</h1>
-        <p>Atlantis Fire and Security has been providing top-notch fire alarm and security services in Massachusetts
-            for over 20 years. Our mission is to ensure the safety and security of our clients through innovative
-            solutions and exceptional customer service.</p>
-        <img src="images/camera_sys_3.jpeg" alt="About Us">
-    </div>
-    <footer>
-        <p>&copy; 2000 Atlantis Fire and Security. All rights reserved.</p>
-    </footer>
+<header>
+    <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+    <h1>About Us</h1>
+    <p>A deeper look into how Atlantis Fire and Security came to be what it is today.</p>
+</header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                const navContainer = document.createElement("div");
+                navContainer.innerHTML = data;
+                document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
+            })
+            .catch(error => console.error("Error loading the navbar:", error));
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("contact_form.html")
+            .then(response => response.text())
+            .then(data => {
+                const formContainer = document.createElement("div");
+                formContainer.innerHTML = data;
+                document.body.appendChild(formContainer); // Appends the form at the bottom
+            })
+            .catch(error => console.error("Error loading the contact form:", error));
+    });
+</script>
+
+<div class="container">
+    <h1>About Us</h1>
+    <p>Atlantis Fire and Security has been providing top-notch fire alarm and security services in Massachusetts
+        for over 20 years. Our mission is to ensure the safety and security of our clients through innovative
+        solutions and exceptional customer service.</p>
+    <img src="images/camera_sys_3.jpeg" alt="About Us">
+</div>
+<footer>
+    <p>&copy; 2000 Atlantis Fire and Security. All rights reserved.</p>
+</footer>
 </body>
 </html>
