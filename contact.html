@@ -22,13 +22,18 @@
         }
 
         .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
-        .form-row.full-width {
-            grid-template-columns: 1fr;
+        .form-row div {
+            flex: 1 1 calc(50% - 10px); /* Ensure two inputs per row */
+            min-width: 150px;
+        }
+
+        .form-row.full-width div {
+            flex: 1 1 100%; /* Full-width input for larger fields */
         }
 
         form label {
