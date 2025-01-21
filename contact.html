@@ -24,10 +24,15 @@
         .form-row {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .form-row div {
-            flex: 1;
+            flex: 1 1 calc(50% - 10px); /* Adjust for two equal halves */
+        }
+
+        .form-row.full-width div {
+            flex: 1 1 100%; /* Full width row */
         }
 
         form label {
@@ -120,6 +125,13 @@
                         <div>
                             <label for="phone">Phone Number:</label>
                             <input type="tel" id="phone" name="from_phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row full-width">
+                        <div>
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="from_address" required>
                         </div>
                     </div>
 
