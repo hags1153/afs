@@ -215,8 +215,10 @@ nav ul li:hover .dropdown {
 }
 
 .service-graphic {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 200px; /* Fixed width for uniform sizing */
+    height: 150px; /* Fixed height for uniform sizing */
+    object-fit: cover; /* Ensures the image fits within the dimensions */
+    border-radius: 10px; /* Keeps rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
