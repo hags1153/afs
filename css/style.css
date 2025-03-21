@@ -1,224 +1,127 @@
-/* Centering the entire page content */
+/* Font and layout enhancements */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Allows for natural flow from top to bottom */
-    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background-color: #1f2c3c;
+    color: #fff;
     margin: 0;
     padding: 0;
-    background-color: #1f2c3c;
-    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Centering the header */
-header {
+/* Header */
+.site-header {
     background-color: #222d3b;
-    color: #ffffff;
-    padding: 10px 0;
     text-align: center;
-    width: 100%;
+    padding: 40px 20px;
 }
 
-header img {
-    height: 50px;
-}
-
-/* Navigation bar */
-nav {
-    width: 100%;
-    max-width: 1200px; /* Restricts width for better readability */
-    margin: 0 auto;
-    border: 2px solid #1f2c3c;
-    padding: 10px;
-    background-color: #1f2c3c;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center; /* Centers the nav links */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Main content container */
-.container {
-    max-width: 800px;
-    width: 90%;
-    margin: 20px auto;
-    background-color: #202c3a;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-    text-align: left; /* Left-aligns text inside the container */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-}
-
-/* Styling for bullet points */
-ul {
-    list-style-type: disc;
-    margin-left: 20px; /* Indent bullet points */
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px; /* Add spacing between items */
-    line-height: 1.5; /* Better readability */
-}
-
-/* Optional: Headings inside the container */
-.container h2 {
-    text-align: center; /* Keep headings centered if needed */
+.logo {
+    height: 60px;
     margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navbar already styled */
+
+/* Container sections */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Reusable section styling */
+.section {
+    margin-bottom: 60px;
+}
+
+/* Flex layout for side-by-side */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.feature-img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CTA Section */
+.cta {
+    background-color: #2a3a4f;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #f5b342;
+    color: #222;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e1a832;
+}
+
+.button.highlight {
+    background-color: #00c9a7;
+    color: #fff;
+}
+
+.button.highlight:hover {
+    background-color: #00b295;
+}
+
+/* Services List */
+.services-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.services-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.services-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f5b342;
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
-    width: 100%;
     background-color: #222d3b;
-    color: #ffffff;
+    color: #aaa;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    padding: 15px 0;
+    font-size: 0.9rem;
 }
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff !important; /* Force solid white text color */
-    font-weight: bold; /* Bold text */
-    padding: 10px 15px;
-    display: block;
-}
-
-nav ul li:hover {
-    background-color: #2a3a4f; /* Slightly lighter blue for hover */
-}
-
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2a3a4f; /* Dropdown matches hover color */
-    border: 1px solid #1f2c3c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-nav ul li .dropdown li a {
-    color: #ffffff !important; /* Force solid white for dropdown items */
-    font-weight: bold;
-    padding: 8px 12px;
-    display: block;
-    text-decoration: none;
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #555;
-}
-
-.contact-form-container {
-    text-align: center;
-    background-color: #1f2c3c; /* Matches the site's theme */
-    padding: 20px;
-    border-top: 2px solid #2a3a4f;
-}
-
-.contact-form-container h2 {
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.contact-form label {
-    display: block;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #2a3a4f;
-}
-
-.contact-form button {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #555;
-}
-
-.service {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    gap: 20px;
-}
-
-.service-content {
-    flex: 1;
-    text-align: left;
-}
-
-.service-image {
-    flex: 0 0 300px; /* Fixed width for images */
-    text-align: center;
-}
-
-.service-graphic {
-    width: 200px; /* Fixed width for uniform sizing */
-    height: 150px; /* Fixed height for uniform sizing */
-    object-fit: cover; /* Ensures the image fits within the dimensions */
-    border-radius: 10px; /* Keeps rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
