@@ -7,6 +7,12 @@ body {
     padding: 0;
     line-height: 1.6;
 }
+header {
+    background-color: #222d3b;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
 
 /* Header */
 .site-header {
@@ -124,6 +130,7 @@ header img {
     display: block;
     margin: 0 auto 10px;
 }
+
 
 /*********** Navbar ***********/
 nav {
