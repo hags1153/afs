@@ -22,7 +22,8 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 80px;
+    width: 80px;
     margin-bottom: 15px;
 }
 
@@ -391,4 +392,38 @@ ul {
 
 .about-section h2 {
     margin-top: 0;
+}
+
+.slideshow {
+  margin: 20px auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;
+  width: 500%;
+  animation: slideAnimation 25s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes slideAnimation {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  40%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-200%); }
+  60%  { transform: translateX(-200%); }
+  65%  { transform: translateX(-300%); }
+  80%  { transform: translateX(-300%); }
+  85%  { transform: translateX(-400%); }
+  100% { transform: translateX(-400%); }
 }
