@@ -427,3 +427,117 @@ ul {
   85%  { transform: translateX(-400%); }
   100% { transform: translateX(-400%); }
 }
+
+
+/* Contact Page Styling */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: #202c3a;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Form Container */
+.form-container {
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-row.full-width {
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #f5b342;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #2a3a4f;
+    color: #ffffff;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #f5b342;
+    outline: none;
+    background-color: #324963;
+}
+
+form button {
+    align-self: flex-start;
+    background-color: #f5b342;
+    color: #222;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e1a832;
+}
+
+/* Autocomplete Suggestion Box */
+#suggestions {
+    margin-top: 5px;
+    padding: 0;
+    list-style: none;
+    background-color: #2a3a4f;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+}
+
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#suggestions li:hover {
+    background-color: #3b4d64;
+}
+
+/* Contact Details */
+.contact-details {
+    margin-top: 40px;
+    background-color: #2a3a4f;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.6;
+    color: #eee;
+}
+
+.contact-details h3 {
+    margin-top: 0;
+    color: #f5b342;
+}
