@@ -106,21 +106,18 @@
     const fetchAddressSuggestions = async (event) => {
         const query = event.target.value;
         const suggestionsList = document.getElementById('suggestions');
-
         suggestionsList.innerHTML = '';
         suggestionsList.style.display = 'none';
 
         if (query.length < 3) return;
 
         try {
-            const response = await fetch(
-                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&addressdetails=1&bounded=1&viewbox=-73.508142,42.886589,-69.928393,41.237964`
-            );
+            const response = await fetch(`https://us1.locationiq.com/v1/autocomplete.php?key=pk.e8134ad4886b3520394b3198f638f767&q=${encodeURIComponent(query)}&format=json`);
             const results = await response.json();
 
             results.forEach((result) => {
                 const li = document.createElement('li');
-                li.innerText = result.display_name;
+                li.innerText = result.display_place || result.display_name;
                 li.addEventListener('click', () => populateAddressFields(result));
                 suggestionsList.appendChild(li);
             });
@@ -129,24 +126,24 @@
                 suggestionsList.style.display = 'block';
             }
         } catch (error) {
-            console.error('Error fetching address suggestions:', error);
+            console.error('Error fetching address suggestions from LocationIQ:', error);
         }
     };
 
+    const populateAddressFields = (result) => {
+        const address = result.address || {};
 
-        const populateAddressFields = (result) => {
-            const address = result.address;
+        document.getElementById('street').value = `${address.house_number || ''} ${address.road || result.name || ''}`.trim();
+        document.getElementById('city').value = address.city || address.town || address.village || '';
+        document.getElementById('state').value = address.state || '';
+        document.getElementById('zip').value = address.postcode || '';
 
-            document.getElementById('street').value = `${address.house_number || ''} ${address.road || ''}`.trim();
-            document.getElementById('city').value = address.city || address.town || address.village || '';
-            document.getElementById('state').value = address.state || '';
-            document.getElementById('zip').value = address.postcode || '';
-
-            document.getElementById('autocomplete').value = result.display_name;
-            document.getElementById('suggestions').innerHTML = '';
-            document.getElementById('suggestions').style.display = 'none';
-        };
+        document.getElementById('autocomplete').value = result.display_name;
+        document.getElementById('suggestions').innerHTML = '';
+        document.getElementById('suggestions').style.display = 'none';
+    };
 </script>
+
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
