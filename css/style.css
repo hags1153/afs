@@ -80,7 +80,7 @@ header {
 /* Buttons */
 .button {
     display: inline-block;
-    background-color: #f5b342;
+    background-color: #f2f2f2;
     color: #222;
     font-weight: bold;
     padding: 12px 24px;
@@ -119,7 +119,7 @@ header {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #f5b342;
+    color: #f2f2f2;
     font-weight: bold;
 }
 
@@ -166,7 +166,7 @@ nav ul > li > a {
 
 nav ul > li > a:hover {
     background-color: #2a3a4f;
-    color: #f5b342;
+    color: #f2f2f2;
 }
 
 /* Dropdown Menus */
@@ -204,7 +204,7 @@ nav ul li ul.dropdown li a {
 
 nav ul li ul.dropdown li a:hover {
     background-color: #3b4d64;
-    color: #f5b342;
+    color: #f2f2f2;
 }
 
 
@@ -254,7 +254,7 @@ form label {
     font-weight: bold;
     margin-bottom: 6px;
     display: block;
-    color: #f5b342;
+    color: #f2f2f2;
 }
 
 form input,
@@ -270,14 +270,14 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: #f5b342;
+    border-color: #f2f2f2;
     outline: none;
     background-color: #324963;
 }
 
 form button {
     align-self: flex-start;
-    background-color: #f5b342;
+    background-color: #f2f2f2;
     color: #222;
     font-weight: bold;
     border: none;
@@ -328,5 +328,5 @@ form button:hover {
 
 .contact-details h3 {
     margin-top: 0;
-    color: #f5b342;
+    color: #f2f2f2;
 }
