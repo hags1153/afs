@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Atlantis Fire and Security</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Atlantis Fire and Security</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header>
-    <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
+  <header>
+    <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo" />
     <h1>About Us</h1>
-    <p>A deeper look into how Atlantis Fire and Security came to be what it is today.</p>
-</header>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch("navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                const navContainer = document.createElement("div");
-                navContainer.innerHTML = data;
-                document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
-            })
-            .catch(error => console.error("Error loading the navbar:", error));
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch("contact_form.html")
-            .then(response => response.text())
-            .then(data => {
-                const formContainer = document.createElement("div");
-                formContainer.innerHTML = data;
-                document.body.appendChild(formContainer); // Appends the form at the bottom
-            })
-            .catch(error => console.error("Error loading the contact form:", error));
-    });
-</script>
+    <p>A deeper look into the values that make Atlantis Fire and Security trusted by thousands across Massachusetts.</p>
+  </header>
 
-<div class="container">
-    <h1>About Us</h1>
-    <p>Atlantis Fire and Security has been providing top-notch fire alarm and security services in Massachusetts
-        for over 20 years. Our mission is to ensure the safety and security of our clients through innovative
-        solutions and exceptional customer service.</p>
-    <img src="images/camera_sys_3.jpeg" alt="About Us">
-</div>
-<footer>
-    <p>&copy; 2000 Atlantis Fire and Security Services. All rights reserved.</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          const navContainer = document.createElement("div");
+          navContainer.innerHTML = data;
+          document.body.insertBefore(navContainer.firstChild, document.body.querySelector("header").nextSibling);
+        })
+        .catch(error => console.error("Error loading the navbar:", error));
+    });
+  </script>
+
+  <main class="container">
+    <section class="about-section">
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+          Atlantis Fire and Security has proudly served the Greater Boston area and all of Eastern Massachusetts for over two decades. As a local, independently owned business, we specialize in delivering tailored fire alarm and security solutions that larger companies simply can’t match.
+        </p>
+        <p>
+          What sets us apart isn’t just our cutting-edge technology or licensed, highly trained technicians—it’s our people. We care deeply about our customers’ safety, and we treat every home and business like it’s our own.
+        </p>
+      </div>
+      <img src="images/camera_sys_3.jpeg" alt="Team at Work" />
+    </section>
+
+    <section class="about-section">
+      <img src="images/service_area.png" alt="Our Service Area Map" />
+      <div class="about-text">
+        <h2>Locally Rooted. Regionally Trusted.</h2>
+        <p>
+          From Boston to Cape Cod, we’ve built a reputation for timely, dependable service and custom security solutions. Whether it’s a residential smoke detector or a full-scale commercial fire alarm system, Atlantis delivers quality that’s tough to find anywhere else.
+        </p>
+        <p>
+          We’re small by design—because it means we stay agile, stay accountable, and never treat our clients like just another job ticket.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-text">
+        <h2>Why Choose Atlantis?</h2>
+        <ul>
+          <li>✔ Over 20 years of proven success</li>
+          <li>✔ Locally owned and operated</li>
+          <li>✔ Unmatched attention to detail and customer care</li>
+          <li>✔ Personalized solutions for residential and commercial needs</li>
+          <li>✔ Rapid response, expert installations, and 24/7 monitoring</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Atlantis Fire and Security Services. All rights reserved.</p>
     <a href="contact.html" class="button">Contact Us</a>
-</footer>
+  </footer>
 </body>
 </html>

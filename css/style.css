@@ -368,3 +368,27 @@ ul {
   text-align: center;
   margin-top: 10px;
 }
+
+.about-section {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    flex: 1 1 300px;
+}
+
+.about-text {
+    flex: 2 1 400px;
+}
+
+.about-section h2 {
+    margin-top: 0;
+}
