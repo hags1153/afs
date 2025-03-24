@@ -117,7 +117,7 @@
 
             results.forEach((result) => {
                 const li = document.createElement('li');
-                li.innerText = result.display_place || result.display_name;
+                li.innerText = result.display_name;
                 li.addEventListener('click', () => populateAddressFields(result));
                 suggestionsList.appendChild(li);
             });
@@ -133,17 +133,20 @@
     const populateAddressFields = (result) => {
         const address = result.address || {};
 
+        // Show full address in the input box
+        document.getElementById('autocomplete').value = result.display_name;
+
+        // Fill in individual components (if available)
         document.getElementById('street').value = `${address.house_number || ''} ${address.road || result.name || ''}`.trim();
         document.getElementById('city').value = address.city || address.town || address.village || '';
         document.getElementById('state').value = address.state || '';
         document.getElementById('zip').value = address.postcode || '';
 
-        document.getElementById('autocomplete').value = result.display_name;
+        // Hide suggestions
         document.getElementById('suggestions').innerHTML = '';
         document.getElementById('suggestions').style.display = 'none';
     };
 </script>
-
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
