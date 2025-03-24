@@ -1,125 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Atlantis Fire and Security</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Atlantis Fire and Security</title>
+  <link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
-    <header>
-        <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo">
-        <h1>Atlantis Fire and Security - All Services</h1>
-        <p> Take a look at all of our offered services!</p>
-    </header>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    const navContainer = document.createElement("div");
-                    navContainer.innerHTML = data;
-                    document.body.insertBefore(navContainer.firstChild, document.body.querySelector('header').nextSibling);
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        });
-    </script>
-    <main class="container">
-        <h1>Our Services</h1>
+  <header>
+    <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo" />
+    <h1>Atlantis Fire and Security - All Services</h1>
+    <p>Take a look at all of our offered services!</p>
+  </header>
 
-        <section class="service">
-            <div class="service-content">
-                <h2>Home Alarm Systems</h2>
-                <p>Protect your home and family with reliable and effective alarm systems.</p>
-            </div>
-            <div class="service-image">
-                <img src="images/security.xcf" alt="Home Alarm Systems" class="service-graphic">
-            </div>
-        </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.createElement("div");
+          navContainer.innerHTML = data;
+          document.body.insertBefore(navContainer.firstChild, document.body.querySelector("header").nextSibling);
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+    });
+  </script>
 
-        <section class="service">
-            <div class="service-content">
-                <h2>Commercial Fire Alarm Systems</h2>
-                <ul>
-                    <li>24/7 Monitoring</li>
-                    <li>Fire Alarm and Sprinkler Monitoring</li>
-                    <li>Installation</li>
-                    <li>Annual Testing</li>
-                    <li>Service/Maintenance</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="images/fire.png" alt="Commercial Fire Alarm Systems" class="service-graphic">
-            </div>
-        </section>
+  <main class="container">
+    <h1>Our Services</h1>
 
-        <section class="service">
-            <div class="service-content">
-                <h2>Security Systems</h2>
-                <ul>
-                    <li>Residential and Commercial</li>
-                    <li>Installation</li>
-                    <li>Service/Maintenance</li>
-                    <li>Annual Testing</li>
-                    <li>Remote Access/Control</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="images/card_access_2.png" alt="Security Systems" class="service-graphic">
-            </div>
-        </section>
+    <section class="service">
+      <div class="service-content">
+        <h2>Home Alarm Systems</h2>
+        <p>Protect your home and family with reliable and effective alarm systems.</p>
+      </div>
+      <div class="service-image">
+        <img src="images/security.xcf" alt="Home Alarm Systems" />
+      </div>
+    </section>
 
-        <section class="service">
-            <div class="service-content">
-                <h2>Commercial Cameras</h2>
-                <ul>
-                    <li>IP-Based Cameras</li>
-                    <li>Card Access Systems</li>
-                    <li>Direct to Device</li>
-                    <li>Remote Viewing</li>
-                    <li>NVR or Cloud-Based Storage</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="images/camera.png" alt="Commercial Cameras" class="service-graphic">
-            </div>
-        </section>
+    <section class="service">
+      <div class="service-content">
+        <h2>Commercial Fire Alarm Systems</h2>
+        <ul>
+          <li>24/7 Monitoring</li>
+          <li>Fire Alarm and Sprinkler Monitoring</li>
+          <li>Installation</li>
+          <li>Annual Testing</li>
+          <li>Service/Maintenance</li>
+        </ul>
+      </div>
+      <div class="service-image">
+        <img src="images/fire.png" alt="Commercial Fire Alarm Systems" />
+      </div>
+    </section>
 
-        <section class="service">
-            <div class="service-content">
-                <h2>Monitoring Services</h2>
-                <ul>
-                    <li>Fire Alarms</li>
-                    <li>High/Low Temperature Monitoring</li>
-                    <li>Water Level/Flood Detection</li>
-                    <li>Sprinkler Systems</li>
-                    <li>Security Systems</li>
-                    <li>Emergency Elevator Phone</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="images/monitoring_1.png" alt="Monitoring Services" class="service-graphic">
-            </div>
-        </section>
+    <section class="service">
+      <div class="service-content">
+        <h2>Security Systems</h2>
+        <ul>
+          <li>Residential and Commercial</li>
+          <li>Installation</li>
+          <li>Service/Maintenance</li>
+          <li>Annual Testing</li>
+          <li>Remote Access/Control</li>
+        </ul>
+      </div>
+      <div class="service-image">
+        <img src="images/card_access_2.png" alt="Security Systems" />
+      </div>
+    </section>
 
-        <section class="service">
-            <div class="service-content">
-                <h2>Additional Services</h2>
-                <ul>
-                    <li>Home Fire Alarms</li>
-                    <li>Security Cameras</li>
-                    <li>Carbon Monoxide Monitoring</li>
-                    <li>Instant Connect – Wireless Home Security Monitoring</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="images/temperature.png" alt="Additional Services" class="service-graphic">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2000 Atlantis Fire and Security Services. All rights reserved.</p>
-        <a href="contact.html" class="button">Contact Us</a>
-    </footer>
+    <section class="service">
+      <div class="service-content">
+        <h2>Commercial Cameras</h2>
+        <ul>
+          <li>IP-Based Cameras</li>
+          <li>Card Access Systems</li>
+          <li>Direct to Device</li>
+          <li>Remote Viewing</li>
+          <li>NVR or Cloud-Based Storage</li>
+        </ul>
+      </div>
+      <div class="service-image">
+        <img src="images/camera.png" alt="Commercial Cameras" />
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="service-content">
+        <h2>Monitoring Services</h2>
+        <ul>
+          <li>Fire Alarms</li>
+          <li>High/Low Temperature Monitoring</li>
+          <li>Water Level/Flood Detection</li>
+          <li>Sprinkler Systems</li>
+          <li>Security Systems</li>
+          <li>Emergency Elevator Phone</li>
+        </ul>
+      </div>
+      <div class="service-image">
+        <img src="images/monitoring_1.png" alt="Monitoring Services" />
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="service-content">
+        <h2>Additional Services</h2>
+        <ul>
+          <li>Home Fire Alarms</li>
+          <li>Security Cameras</li>
+          <li>Carbon Monoxide Monitoring</li>
+          <li>Instant Connect – Wireless Home Security Monitoring</li>
+        </ul>
+      </div>
+      <div class="service-image">
+        <img src="images/temperature.png" alt="Additional Services" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Atlantis Fire and Security. All rights reserved.</p>
+    <a href="contact.html" class="button">Contact Us</a>
+  </footer>
 </body>
 </html>
