@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="site-header">
-    <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo" class="logo" />
+    <img src="images/afs_logo.png" alt="Atlantis Fire and Security Logo" class="logo"/>
     <h1>Contact Us</h1>
     <p>Contact us with any general inquiries or to schedule a free consultation or estimate!</p>
 </header>
@@ -30,64 +30,66 @@
 <main>
     <section>
         <h2>Get in Touch</h2>
-        <div class="form-container">
-            <form id="contactForm" onsubmit="sendEmail(event)">
-                <div class="form-row">
-                    <div>
-                        <label for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="from_first" required>
+        <div class="contact-wrapper">
+            <div class="form-container">
+                <form id="contactForm" onsubmit="sendEmail(event)">
+                    <div class="form-row">
+                        <div>
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="from_first" required>
+                        </div>
+                        <div>
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="from_last" required>
+                        </div>
                     </div>
-                    <div>
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="from_last" required>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="from_email" required>
+                    <div class="form-row">
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="from_email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="from_phone" required>
+                        </div>
                     </div>
-                    <div>
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="from_phone" required>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div>
-                        <label for="street">Street:</label>
-                        <input id="street" name="street" type="text" placeholder="123 Main St" required>
+                    <div class="form-row">
+                        <div>
+                            <label for="street">Street:</label>
+                            <input id="street" name="street" type="text" placeholder="123 Main St" required>
+                        </div>
+                        <div>
+                            <label for="city">City/Town:</label>
+                            <input id="city" name="city" type="text" placeholder="Boston">
+                        </div>
                     </div>
-                    <div>
-                        <label for="city">City/Town:</label>
-                        <input id="city" name="city" type="text" placeholder="Boston">
+
+                    <div class="form-row">
+                        <div>
+                            <label for="state">State:</label>
+                            <input id="state" name="state" type="text" placeholder="MA">
+                        </div>
+                        <div>
+                            <label for="zip">ZIP Code:</label>
+                            <input id="zip" name="zip" type="text" placeholder="02111">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-row">
-                    <div>
-                        <label for="state">State:</label>
-                        <input id="state" name="state" type="text" placeholder="MA">
-                    </div>
-                    <div>
-                        <label for="zip">ZIP Code:</label>
-                        <input id="zip" name="zip" type="text" placeholder="02111">
-                    </div>
-                </div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-
-        <div class="contact-details">
-            <h3>Contact Details</h3>
-            <p><strong>Address:</strong> 123 Main Street, Beverly, MA 01915</p>
-            <p><strong>Phone:</strong> (978) 810-7248</p>
-            <p><strong>Email:</strong> contact@atlantisfireandsecurity.com</p>
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <p><strong>Address:</strong> 123 Main Street, Beverly, MA 01915</p>
+                <p><strong>Phone:</strong> (978) 810-7248</p>
+                <p><strong>Email:</strong> contact@atlantisfireandsecurity.com</p>
+            </div>
         </div>
     </section>
 </main>
